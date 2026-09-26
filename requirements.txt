@@ -1,0 +1,23 @@
+# Core: the decision model. Everything in this repo needs this.
+gliner2
+
+# --- 03_latency_benchmark_gliner_vs_qwen.ipynb -----------------------------
+# The Qwen side of the benchmark (4-bit NF4 on a single GPU).
+transformers
+accelerate
+bitsandbytes
+pandas
+matplotlib
+tabulate          # for DataFrame.to_markdown()
+
+# --- 04_space_invaders/ -----------------------------------------------------
+gymnasium[atari]
+ale-py
+ocatari
+imageio
+imageio-ffmpeg
+
+# --- 04_space_invaders/space_invaders_copilot.py --input voice --------------
+# Optional: only needed for the voice interface.
+# faster-whisper
+# sounddevice

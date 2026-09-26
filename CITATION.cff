@@ -1,0 +1,48 @@
+cff-version: 1.2.0
+title: "GLiNER2.5-Decide playground: fast local decisions, from ticket routing to a Space Invaders copilot"
+message: "If you use this code, please cite the repository and, above all, the GLiNER2 paper it builds on."
+type: software
+authors:
+  # CFF requires a person (family-names) or an entity (name).
+  # An entity entry keeps the citation valid without a legal name.
+  - name: "wiseright"
+    alias: "wiseright"
+repository-code: "https://github.com/wiseright/gliner-decide-playground"
+abstract: >-
+  Companion code for a Medium article on decision models. Six applied examples
+  of GLiNER2.5-Decide, a like-for-like end-to-end latency benchmark against
+  4-bit quantised Qwen models on a single Colab T4, and two Space Invaders
+  experiments that put a 340M encoder inside a 50 ms real-time loop.
+keywords:
+  - decision-models
+  - gliner
+  - text-classification
+  - zero-shot-classification
+  - latency-benchmark
+  - atari
+  - gymnasium
+license: MIT
+date-released: "2026-09-26"
+references:
+  - type: article
+    title: "GLiNER2: An Efficient Multi-Task Information Extraction System with Schema-Driven Interface"
+    authors:
+      - name: "Fastino AI and contributors"
+    identifiers:
+      - type: other
+        value: "arXiv:2507.18546"
+    url: "https://arxiv.org/abs/2507.18546"
+  - type: article
+    title: "GLiNER: Generalist Model for Named Entity Recognition using Bidirectional Transformer"
+    authors:
+      - family-names: Zaratiana
+        given-names: Urchade
+    identifiers:
+      - type: other
+        value: "arXiv:2311.08526"
+    url: "https://arxiv.org/abs/2311.08526"
+  - type: software
+    title: "GLiNER2.5-Decide"
+    authors:
+      - name: "Fastino AI"
+    url: "https://huggingface.co/fastino/GLiNER2.5-Decide"

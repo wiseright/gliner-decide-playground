@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.Python
+build/
+dist/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Model / dataset caches
+.cache/
+~/.cache/
+hf_cache/
+*.pt
+*.bin
+*.safetensors
+
+# Run artefacts produced by the scripts and notebooks
+space_invaders_*.mp4
+!assets/space_invaders_gliner_perception.mp4
+latency_t4.png
+*.log
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
