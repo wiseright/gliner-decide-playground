@@ -18,7 +18,8 @@ Command input (--input):
             --script "150:1; 600:2; 1100:Stay on the left and don't take risks"
 
 Install:
-  pip install gliner2 "gymnasium[atari]" ale-py ocatari imageio imageio-ffmpeg
+  pip install gliner2 transformers peft accelerate
+  pip install "gymnasium[atari]" ale-py ocatari imageio imageio-ffmpeg
   pip install faster-whisper sounddevice      # only for --input voice
 
 Examples:

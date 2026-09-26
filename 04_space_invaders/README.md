@@ -11,9 +11,15 @@ lesson that came out of them.
 ## Install
 
 ```bash
-pip install gliner2 "gymnasium[atari]" ale-py ocatari imageio imageio-ffmpeg
+pip install gliner2 transformers peft accelerate
+pip install "gymnasium[atari]" ale-py ocatari imageio imageio-ffmpeg
 pip install faster-whisper sounddevice      # only for --input voice
 ```
+
+`transformers`, `peft` and `accelerate` are listed explicitly because `gliner2`
+2.0.0 imports them without declaring them. Without an NVIDIA GPU, install torch
+from the CPU index first:
+`pip install --index-url https://download.pytorch.org/whl/cpu torch`
 
 ROMs are provisioned by `ale-py` — this repository ships none. See
 [`../THIRD_PARTY_NOTICES.md`](../THIRD_PARTY_NOTICES.md).

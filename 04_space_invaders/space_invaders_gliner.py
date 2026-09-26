@@ -16,7 +16,8 @@ so with an even frameskip you always land on the same kind of frame and the
 enemy missiles become invisible.
 
 Install:
-    pip install gliner2 "gymnasium[atari]" ale-py ocatari imageio imageio-ffmpeg
+    pip install gliner2 transformers peft accelerate
+    pip install "gymnasium[atari]" ale-py ocatari imageio imageio-ffmpeg
 Run:
     python space_invaders_gliner.py --policy rules  --render video
     python space_invaders_gliner.py --policy gliner --render video --verbose

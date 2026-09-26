@@ -1,10 +1,21 @@
 # Core: the decision model. Everything in this repo needs this.
+#
+# NOTE: gliner2 2.0.0 does not declare transformers, peft or accelerate in its
+# own metadata, but imports all three at load time. `pip install gliner2` alone
+# fails with ModuleNotFoundError on a clean environment; it only appears to work
+# on Colab, where those packages are pre-installed. So list them explicitly.
 gliner2
+transformers
+peft
+accelerate
+#
+# On a machine without an NVIDIA GPU, install torch from the CPU index FIRST,
+# otherwise pip pulls ~3 GB of CUDA libraries that will never be used:
+#   pip install --index-url https://download.pytorch.org/whl/cpu torch
+torch
 
 # --- 03_latency_benchmark_gliner_vs_qwen.ipynb -----------------------------
 # The Qwen side of the benchmark (4-bit NF4 on a single GPU).
-transformers
-accelerate
 bitsandbytes
 pandas
 matplotlib

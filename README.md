@@ -67,9 +67,19 @@ python -m venv .venv && source .venv/bin/activate    # Windows: .venv\Scripts\ac
 pip install -r requirements.txt
 ```
 
-`requirements.txt` is grouped by section — if you only want the six applications,
-`pip install gliner2` is enough. The notebooks also `pip install` what they need
-inline, so on Colab you can skip this entirely.
+`requirements.txt` is grouped by section, so you can install only the part you
+want. The notebooks `pip install` what they need inline, so on Colab you can skip
+this step entirely.
+
+> **Heads-up on `gliner2` 2.0.0:** it imports `transformers`, `peft` and
+> `accelerate` at load time but does not declare them as dependencies, so
+> `pip install gliner2` on its own fails with `ModuleNotFoundError`. On Colab it
+> works by accident, because those packages are pre-installed. Install
+> `gliner2 transformers peft accelerate` together.
+>
+> **No NVIDIA GPU?** Install the CPU wheel explicitly, or pip will pull ~3 GB of
+> CUDA libraries you cannot use:
+> `pip install --index-url https://download.pytorch.org/whl/cpu torch`
 
 The Space Invaders scripts need a few more moving parts; see
 [`04_space_invaders/README.md`](04_space_invaders/README.md).
